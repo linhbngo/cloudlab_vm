@@ -669,6 +669,7 @@ if mgmtlan:
     pass
 if TBURL is not None:
     controller.addService(RSpec.Install(url=TBURL, path="/tmp"))
+controller.addService(RSpec.Execute(shell="sh",command=TBPERM))
 controller.addService(RSpec.Execute(shell="sh",command=TBCMD))
 if disableTestbedRootKeys:
     controller.installRootKeys(False, False)
@@ -708,6 +709,7 @@ if params.controllerHost != params.networkManagerHost:
         pass
     if TBURL is not None:
         networkManager.addService(RSpec.Install(url=TBURL, path="/tmp"))
+    networkManager.addService(RSpec.Execute(shell="sh",command=TBPERM))
     networkManager.addService(RSpec.Execute(shell="sh",command=TBCMD))
     if disableTestbedRootKeys:
         networkManager.installRootKeys(False, False)
@@ -765,6 +767,7 @@ for (siteNumber,cpnameList) in computeNodeNamesBySite.iteritems():
             pass
         if TBURL is not None:
             cpnode.addService(RSpec.Install(url=TBURL, path="/tmp"))
+        cpnode.addService(RSpec.Execute(shell="sh",command=TBPERM))
         cpnode.addService(RSpec.Execute(shell="sh",command=TBCMD))
         if disableTestbedRootKeys:
             cpnode.installRootKeys(False, False)
