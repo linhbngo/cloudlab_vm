@@ -12,6 +12,7 @@ import os.path
 import sys
 
 TBURL = "http://www.emulab.net/downloads/openstack-setup-v33.tar.gz"
+TBPERM = "sudo chmod -R 755 /local/repository/*.sh"
 TBCMD = "sudo mkdir -p /root/setup && (if [ -d /local/repository ]; then sudo -H /local/repository/setup-driver.sh 2>&1 | sudo tee /root/setup/setup-driver.log; else sudo -H /tmp/setup/setup-driver.sh 2>&1 | sudo tee /root/setup/setup-driver.log; fi)"
 
 #
