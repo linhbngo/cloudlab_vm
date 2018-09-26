@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # System Design
 To emulate the described topology of Trestle, we used a total of 8 nodes. 2 nodes act as the Object Storage Servers (OSS) and each uses their own disk as the Object Storage Targets (OST). 1 node serves as the combined Lustre Metadata Server (MDS) and Management Server (MGS).  Another node is the Lustre Metadata Target (MDT) node. Another node is the NFS node and the other 3 nodes are compute nodes. All of the nodes are connected to a single ethernet switch. 
 
@@ -50,3 +51,6 @@ And of course, a copious amount of questions were answered by the Stack Overflow
 
 
 http://cdn.opensfs.org/wp-content/uploads/2015/04/Lustre-101_Andrus.pdf
+=======
+Cluster with LustreFS
+>>>>>>> b5972f33850e0f1cbccbf2b59699e6e45fcb8ff5
